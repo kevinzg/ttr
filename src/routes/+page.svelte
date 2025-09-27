@@ -66,6 +66,12 @@
     <footer
         class="border-t border-gray-200/50 pt-12 text-center text-sm text-gray-500 dark:border-slate-700/50 dark:text-gray-400"
     >
-        <p> Found any issues? Please report them <a href="https://github.com/kevinzg/ttr/issues" class="text-blue-600 transition-colors hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">here</a>.</p>
+        <p>
+            Found any issues? Please report them <a
+                href="https://github.com/kevinzg/ttr/issues"
+                class="text-blue-600 transition-colors hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                >here</a
+            >.
+        </p>
     </footer>
 </div>
