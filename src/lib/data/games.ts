@@ -6,8 +6,8 @@ export interface Game {
 
 export const games: Game[] = [
     {
-        id: 'base',
-        name: 'Base TTR (USA)',
+        id: 'usa',
+        name: 'USA',
         rules: [
             { key: '# of trains', value: '45' },
             { key: '# initial cards', value: '4' },
