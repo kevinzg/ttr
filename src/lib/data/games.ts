@@ -56,8 +56,8 @@ export const games: Game[] = [
             { key: '# initial tickets', value: '3, keep 2' },
             { key: '# extra tickets', value: '3, keep 1' },
             { key: 'Longest route bonus', value: '10 points' },
-            { key: 'Bullet train', value: 'Counts as any color' },
-            { key: 'End game trigger', value: '6 or fewer trains' },
+            { key: 'Bullet train', value: 'Shared routes; contribute to gain points' },
+            { key: 'End game trigger', value: '2 or fewer trains left' }
         ],
     },
     {
@@ -71,7 +71,8 @@ export const games: Game[] = [
             { key: '# extra tickets', value: '3, keep 1' },
             { key: 'Longest route bonus', value: '10 points' },
             { key: 'Ferry routes', value: 'Require locomotives' },
-            { key: 'End game trigger', value: '6 or fewer trains' },
+            { key: 'Region Bonus', value: 'Points for connecting regions' },
+            { key: 'End game trigger', value: '2 or fewer trains left' }
         ],
     },
     {
@@ -84,8 +85,8 @@ export const games: Game[] = [
             { key: '# initial tickets', value: '3, keep 2' },
             { key: '# extra tickets', value: '3, keep 1' },
             { key: 'Longest route bonus', value: '10 points' },
-            { key: 'Mandala tokens', value: 'Bonus points for routes' },
-            { key: 'End game trigger', value: '6 or fewer trains' },
+            { key: 'Mandala Bonus', value: 'Points for 2+ routes between cities' },
+            { key: 'End game trigger', value: '2 or fewer trains left' },
         ],
     },
     {
@@ -112,6 +113,7 @@ export const games: Game[] = [
             { key: '# initial tickets', value: '4, keep 2' },
             { key: '# extra tickets', value: '3, keep 1' },
             { key: 'Team play', value: '4 or 6 players in teams of 2' },
+            { key: 'Shared routes', value: 'Teammates share routes and tickets' },
             { key: 'Longest route bonus', value: '10 points per team member' },
             { key: 'Mountain passes', value: 'Require locomotives' },
         ],
@@ -127,8 +129,6 @@ export const games: Game[] = [
             { key: '# extra tickets', value: '3, keep 1' },
             { key: 'Longest route bonus', value: '10 points' },
             { key: 'Mountain passes', value: 'Require locomotives' },
-            { key: 'Tea & Spice cards', value: 'Special cards for bonus points' },
-            { key: 'Assignment cards', value: 'Additional scoring objectives' },
         ],
     },
     {
@@ -156,7 +156,7 @@ export const games: Game[] = [
             { key: '# extra tickets', value: '3, keep 1' },
             { key: 'Longest route bonus', value: '10 points' },
             { key: 'Alvin the Alien', value: 'Moving piece for bonus points' },
-            { key: 'Team play', value: '4 or 6 players in teams' },
+            { key: 'Home cities', value: 'Build must connect to your starting city' }
         ],
     },
     {
@@ -183,8 +183,8 @@ export const games: Game[] = [
             { key: '# initial tickets', value: '5, keep 3' },
             { key: '# extra tickets', value: '3, keep 1' },
             { key: 'Longest route bonus', value: '10 points' },
-            { key: 'Technology tokens', value: 'Special abilities and bonuses' },
-            { key: 'Concession tokens', value: 'Required to claim certain routes' },
+            { key: 'Technology cards', value: 'Buy with locomotives to unlock abilities' },
+            { key: 'Concessions', value: 'Required to build in specific regions' }
         ],
     },
     {
@@ -198,7 +198,7 @@ export const games: Game[] = [
             { key: '# extra tickets', value: '3, keep 1' },
             { key: 'Game length', value: '10-15 minutes' },
             { key: 'Routes', value: 'Tram lines through Amsterdam' },
-            { key: 'Special mechanic', value: 'No locomotives in deck' },
+            { key: 'Goods bonus', value: 'Collect tokens for completed routes' }
         ],
     },
 ];
