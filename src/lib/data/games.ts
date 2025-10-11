@@ -152,44 +152,64 @@ export const games: Game[] = [
     },
     {
         id: 'japan',
-        name: 'Japan',
+        name: 'Japan ✅',
         rules: {
             players: '2-5',
             trains: '20',
             initialTrainCards: '4',
-            initialTickets: '3, keep 2+',
+            initialTickets: '4, keep 2+',
             extraTickets: '3, keep 1+',
-            discardedTickets: 'in the box',
-            endOfGameBonus: 'Longest route: 10 points',
+            discardedTickets: 'bottom of the deck',
+            endOfGameBonus: 'Bullet Train bonus',
         },
         extraRules: [
             {
-                name: 'Bullet train',
-                description: 'Shared routes that multiple players can contribute to',
+                name: 'Bullet Train Routes',
+                description: 'Shared routes that contribute to a national Bullet Train network.',
                 details: [
-                    'Only one bullet train route on the map',
-                    'Multiple players can place trains on the same route',
-                    'Each player scores points based on their contribution',
-                    'Must have at least 2 trains to score',
+                    'Bullet Train Routes are special routes that any player may later use to complete Destination Tickets.',
+                    'To claim one, play cards of a single color equal to the number of spaces on the route. Locomotives may be used.',
+                    'Instead of scoring points, advance your Progression Marker on the Bullet Train Track by the number of cards played.',
+                    'Place a white Bullet Train miniature on the route instead of your own Train Cars.',
+                    'Once all Bullet Train miniatures are used, any unclaimed Bullet Train Routes become standard gray routes and are claimed normally.',
+                    'The Aomori–Hakodate routes are not double routes; they follow normal single-route rules.',
                 ],
-                table: {
-                    headers: ['Trains Placed', 'Points Scored'],
-                    rows: [
-                        ['2 trains', '10 points'],
-                        ['3 trains', '15 points'],
-                        ['4 trains', '20 points'],
-                        ['5+ trains', '25 points'],
-                    ],
-                },
             },
             {
-                name: 'End game trigger',
-                description: '2 or fewer trains left (instead of usual 0-2)',
+                name: 'Kyushu Island & Tokyo Subway',
+                description: 'Zoomed-in regions of the main Japan map.',
                 details: [
-                    'Game ends immediately when any player has 2 or fewer trains',
-                    'All players get one final turn',
-                    'Shorter game due to fewer trains per player',
+                    'Routes in these areas are claimed using the normal rules.',
+                    'For Destination Tickets, consider both Tokyo spaces as the same city, and both Kokura spaces as the same city.',
+                    'Connections into or out of these regions count as if they connect directly to their corresponding main-board city.',
                 ],
+            },
+            {
+                name: 'End of Game Trigger',
+                description: '2 or fewer bullet trains left too',
+                details: [
+                    'In addition to the standard end game trigger, there is an extra condition: there must be 0, 1 or 2 bullet trains left in the supply',
+                ],
+            },
+            {
+                name: 'Bullet Train Scoring',
+                description:
+                    "Get bonus points according to the player's position on the Bullet Train Track.",
+                details: [
+                    'Players higher on the track receive more points; players lower may lose points.',
+                    'In case of a tie, all tied players receive the full points for their position, and the next player scores points as if there was no tie.',
+                ],
+                table: {
+                    headers: ['Rank', 'Points (5/4/3/2 players)'],
+                    rows: [
+                        ['1st', '+25 / +20 / +15 / +10'],
+                        ['2nd', '+15 / +10 / +5 / -10'],
+                        ['3rd', '+5 / 0 / -10'],
+                        ['4th', '-5 / -10'],
+                        ['5th', '-10'],
+                        ['0 trains', '-20 / -20 / -20 / -20'],
+                    ],
+                },
             },
         ],
         rulebook: 'https://www.gokids.com.tw/tsaiss/gokids/rules/TTR_JP_RULEBOOK.pdf',
