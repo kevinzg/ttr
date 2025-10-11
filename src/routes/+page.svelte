@@ -38,7 +38,9 @@
             <div
                 class="overflow-hidden rounded-xl border border-gray-200/50 bg-white/90 shadow-lg backdrop-blur-sm dark:border-slate-600/50 dark:bg-slate-800/80"
             >
-                <div class="rounded-t-xl bg-gray-600 px-6 py-4 text-white dark:bg-gray-700 flex justify-between items-center">
+                <div
+                    class="flex items-center justify-between rounded-t-xl bg-gray-600 px-6 py-4 text-white dark:bg-gray-700"
+                >
                     <h2 class="text-2xl font-bold">{game.name}</h2>
                     {#if game.rulebook}
                         <!-- svelte-ignore svelte/no-navigation-without-resolve -->
@@ -47,7 +49,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             data-sveltekit-external
-                            class="bg-white/20 hover:bg-white/30 text-white text-sm px-3 py-1 rounded-md transition-colors duration-200 font-medium"
+                            class="rounded-md bg-white/20 px-3 py-1 text-sm font-medium text-white transition-colors duration-200 hover:bg-white/30"
                         >
                             📖 Rulebook
                         </a>
@@ -59,19 +61,30 @@
                         {#each basicRules as rule, index (rule.key)}
                             <tr
                                 class="border-b border-gray-100 transition-colors duration-150 hover:bg-gray-200/50 dark:border-slate-700 dark:hover:bg-slate-700/50"
-                                class:last:border-b-0={index === basicRules.length - 1 && game.extraRules.length === 0}
+                                class:last:border-b-0={index === basicRules.length - 1 &&
+                                    game.extraRules.length === 0}
                             >
                                 <td class="px-6 py-4 font-medium text-gray-800 dark:text-gray-200">
                                     {rule.label}
                                 </td>
-                                <td class="px-6 py-4 text-right font-semibold text-blue-600 dark:text-blue-400">
-                                    {rule.key === 'players' ? game.rules.players :
-                                     rule.key === 'trains' ? game.rules.trains :
-                                     rule.key === 'initialTrainCards' ? game.rules.initialTrainCards :
-                                     rule.key === 'initialTickets' ? game.rules.initialTickets :
-                                     rule.key === 'extraTickets' ? game.rules.extraTickets :
-                                     rule.key === 'discardedTickets' ? game.rules.discardedTickets :
-                                     rule.key === 'endOfGameBonus' ? game.rules.endOfGameBonus : ''}
+                                <td
+                                    class="px-6 py-4 text-right font-semibold text-blue-600 dark:text-blue-400"
+                                >
+                                    {rule.key === 'players'
+                                        ? game.rules.players
+                                        : rule.key === 'trains'
+                                          ? game.rules.trains
+                                          : rule.key === 'initialTrainCards'
+                                            ? game.rules.initialTrainCards
+                                            : rule.key === 'initialTickets'
+                                              ? game.rules.initialTickets
+                                              : rule.key === 'extraTickets'
+                                                ? game.rules.extraTickets
+                                                : rule.key === 'discardedTickets'
+                                                  ? game.rules.discardedTickets
+                                                  : rule.key === 'endOfGameBonus'
+                                                    ? game.rules.endOfGameBonus
+                                                    : ''}
                                 </td>
                             </tr>
                         {/each}
@@ -82,17 +95,23 @@
                                 <td class="px-6 py-4 font-medium text-gray-800 dark:text-gray-200">
                                     {rule.name}
                                 </td>
-                                <td class="px-6 py-4 text-right font-semibold text-blue-600 dark:text-blue-400">
+                                <td
+                                    class="px-6 py-4 text-right font-semibold text-blue-600 dark:text-blue-400"
+                                >
                                     <div class="text-right">
                                         {rule.description || rule.name}
                                         {#if (rule.details && rule.details.length > 0) || rule.table}
                                             <details class="mt-2">
-                                                <summary class="cursor-pointer text-xs text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 select-none">
+                                                <summary
+                                                    class="cursor-pointer text-xs text-gray-500 select-none hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                                                >
                                                     Show details
                                                 </summary>
                                                 <div class="mt-2 text-left">
                                                     {#if rule.details && rule.details.length > 0}
-                                                        <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1 mb-2">
+                                                        <ul
+                                                            class="mb-2 list-inside list-disc space-y-1 text-sm text-gray-600 dark:text-gray-400"
+                                                        >
                                                             {#each rule.details as detail}
                                                                 <li>{detail}</li>
                                                             {/each}
@@ -100,12 +119,18 @@
                                                     {/if}
                                                     {#if rule.table}
                                                         <div class="flex justify-center">
-                                                            <table class="text-xs border border-gray-300 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-700 overflow-hidden">
+                                                            <table
+                                                                class="overflow-hidden rounded border border-gray-300 bg-gray-50 text-xs dark:border-gray-600 dark:bg-gray-700"
+                                                            >
                                                                 {#if rule.table.headers}
                                                                     <thead>
-                                                                        <tr class="bg-gray-200 dark:bg-gray-600">
+                                                                        <tr
+                                                                            class="bg-gray-200 dark:bg-gray-600"
+                                                                        >
                                                                             {#each rule.table.headers as header}
-                                                                                <th class="px-2 py-1 text-gray-800 dark:text-gray-200 font-medium border-r border-gray-300 dark:border-gray-500 last:border-r-0">
+                                                                                <th
+                                                                                    class="border-r border-gray-300 px-2 py-1 font-medium text-gray-800 last:border-r-0 dark:border-gray-500 dark:text-gray-200"
+                                                                                >
                                                                                     {header}
                                                                                 </th>
                                                                             {/each}
@@ -114,9 +139,13 @@
                                                                 {/if}
                                                                 <tbody>
                                                                     {#each rule.table.rows as row}
-                                                                        <tr class="border-t border-gray-300 dark:border-gray-600">
+                                                                        <tr
+                                                                            class="border-t border-gray-300 dark:border-gray-600"
+                                                                        >
                                                                             {#each row as cell}
-                                                                                <td class="px-2 py-1 text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-500 last:border-r-0">
+                                                                                <td
+                                                                                    class="border-r border-gray-300 px-2 py-1 text-gray-700 last:border-r-0 dark:border-gray-500 dark:text-gray-300"
+                                                                                >
                                                                                     {cell}
                                                                                 </td>
                                                                             {/each}
@@ -136,8 +165,6 @@
                     </tbody>
                 </table>
             </div>
-
-
 
             <div class="mt-4 px-2">
                 <a

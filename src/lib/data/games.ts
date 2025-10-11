@@ -47,10 +47,10 @@ export const games: Game[] = [
                         ['3 trains', '4 points'],
                         ['4 trains', '7 points'],
                         ['5 trains', '10 points'],
-                        ['6 trains', '15 points']
-                    ]
-                }
-            }
+                        ['6 trains', '15 points'],
+                    ],
+                },
+            },
         ],
         rulebook: 'https://ncdn0.daysofwonder.com/tickettoride/en/img/tt_rules_2015_en.pdf',
     },
@@ -73,8 +73,8 @@ export const games: Game[] = [
                 details: [
                     'Can be placed on any city',
                     "Allows you to use opponent's routes from that city for destination tickets",
-                    'Cannot be moved once placed'
-                ]
+                    'Cannot be moved once placed',
+                ],
             },
             {
                 name: 'Tunnels',
@@ -83,8 +83,8 @@ export const games: Game[] = [
                     'Marked with double lines on the map',
                     'After playing cards, draw 3 additional cards from deck',
                     'For each matching color/locomotive drawn, play 1 additional card',
-                    'If you cannot/will not pay, take cards back and lose turn'
-                ]
+                    'If you cannot/will not pay, take cards back and lose turn',
+                ],
             },
             {
                 name: 'Ferries',
@@ -92,8 +92,8 @@ export const games: Game[] = [
                 details: [
                     'Marked with locomotive symbols',
                     'Must play locomotives for marked spaces',
-                    'Can use wild cards as locomotives'
-                ]
+                    'Can use wild cards as locomotives',
+                ],
             },
             {
                 name: 'Route scoring',
@@ -107,12 +107,13 @@ export const games: Game[] = [
                         ['4 trains', '7 points'],
                         ['5 trains', '10 points'],
                         ['6 trains', '15 points'],
-                        ['8 trains', '21 points']
-                    ]
-                }
-            }
+                        ['8 trains', '21 points'],
+                    ],
+                },
+            },
         ],
-        rulebook: 'https://raw.githubusercontent.com/Bergenheiser/ticket_to_ride_europe/main/documents/Ticket%20to%20Ride%20Europe%20-%20Rules.pdf',
+        rulebook:
+            'https://raw.githubusercontent.com/Bergenheiser/ticket_to_ride_europe/main/documents/Ticket%20to%20Ride%20Europe%20-%20Rules.pdf',
     },
     {
         id: 'africa',
@@ -134,8 +135,8 @@ export const games: Game[] = [
                     'Desert (yellow)',
                     'Jungle (green)',
                     'Mountain (brown)',
-                    'Terrain cards are not train cards'
-                ]
+                    'Terrain cards are not train cards',
+                ],
             },
             {
                 name: 'Terrain routes',
@@ -144,9 +145,9 @@ export const games: Game[] = [
                     'Marked with terrain symbols on the map',
                     'Must discard matching terrain card to claim',
                     'Follow normal rules for train cards',
-                    'Can only be claimed if you have the terrain card'
-                ]
-            }
+                    'Can only be claimed if you have the terrain card',
+                ],
+            },
         ],
     },
     {
@@ -169,7 +170,7 @@ export const games: Game[] = [
                     'Only one bullet train route on the map',
                     'Multiple players can place trains on the same route',
                     'Each player scores points based on their contribution',
-                    'Must have at least 2 trains to score'
+                    'Must have at least 2 trains to score',
                 ],
                 table: {
                     headers: ['Trains Placed', 'Points Scored'],
@@ -177,9 +178,9 @@ export const games: Game[] = [
                         ['2 trains', '10 points'],
                         ['3 trains', '15 points'],
                         ['4 trains', '20 points'],
-                        ['5+ trains', '25 points']
-                    ]
-                }
+                        ['5+ trains', '25 points'],
+                    ],
+                },
             },
             {
                 name: 'End game trigger',
@@ -187,11 +188,11 @@ export const games: Game[] = [
                 details: [
                     'Game ends immediately when any player has 2 or fewer trains',
                     'All players get one final turn',
-                    'Shorter game due to fewer trains per player'
-                ]
-            }
+                    'Shorter game due to fewer trains per player',
+                ],
+            },
         ],
-        rulebook: 'https://www.gokids.com.tw/tsaiss/gokids/rules/TTR_JP_RULEBOOK.pdf'
+        rulebook: 'https://www.gokids.com.tw/tsaiss/gokids/rules/TTR_JP_RULEBOOK.pdf',
     },
     {
         id: 'italy',
@@ -240,12 +241,13 @@ export const games: Game[] = [
                         ['12 regions', '29 points'],
                         ['13 regions', '37 points'],
                         ['14 regions', '46 points'],
-                        ['15+ regions', '56 points']
-                    ]
-                }
-            }
+                        ['15+ regions', '56 points'],
+                    ],
+                },
+            },
         ],
-        rulebook: 'https://cdn.1j1ju.com/medias/10/df/07-ticket-to-ride-map-collection-volume-7-italy-rulebook.pdf',
+        rulebook:
+            'https://cdn.1j1ju.com/medias/10/df/07-ticket-to-ride-map-collection-volume-7-italy-rulebook.pdf',
     },
     {
         id: 'india',
@@ -266,24 +268,24 @@ export const games: Game[] = [
                 details: [
                     'Some city pairs have 2 or 3 parallel routes',
                     'If you claim 2+ routes between the same cities, score bonus points',
-                    'Routes must be between exactly the same pair of cities'
+                    'Routes must be between exactly the same pair of cities',
                 ],
                 table: {
                     headers: ['Routes Between Cities', 'Bonus Points'],
                     rows: [
                         ['2 routes', '10 points'],
-                        ['3 routes', '20 points']
-                    ]
-                }
+                        ['3 routes', '20 points'],
+                    ],
+                },
             },
             {
                 name: 'End game trigger',
                 description: '2 or fewer trains left',
                 details: [
                     'Game ends when any player has 2 or fewer trains',
-                    'Shorter game due to fewer starting trains'
-                ]
-            }
+                    'Shorter game due to fewer starting trains',
+                ],
+            },
         ],
     },
     {
@@ -305,9 +307,9 @@ export const games: Game[] = [
                 details: [
                     'Draw 3 additional cards after claiming',
                     'Pay extra for each matching color/locomotive',
-                    'Take back cards if unable/unwilling to pay'
-                ]
-            }
+                    'Take back cards if unable/unwilling to pay',
+                ],
+            },
         ],
     },
     {
@@ -331,17 +333,17 @@ export const games: Game[] = [
                     '4 players: 2 teams of 2',
                     '6 players: 3 teams of 2',
                     'Teammates sit across from each other',
-                    'Teams share victory conditions'
-                ]
+                    'Teams share victory conditions',
+                ],
             },
             {
                 name: 'Shared routes and tickets',
-                description: 'Teammates can use each other\'s routes for destination tickets',
+                description: "Teammates can use each other's routes for destination tickets",
                 details: [
                     'Routes claimed by either teammate count for both',
-                    'Destination tickets can be completed using partner\'s routes',
-                    'Each player still claims routes individually'
-                ]
+                    "Destination tickets can be completed using partner's routes",
+                    'Each player still claims routes individually',
+                ],
             },
             {
                 name: 'Mountain passes',
@@ -349,9 +351,9 @@ export const games: Game[] = [
                 details: [
                     'Marked with locomotive symbols',
                     'Must play locomotives for marked spaces',
-                    'Same as ferry rules in Europe'
-                ]
-            }
+                    'Same as ferry rules in Europe',
+                ],
+            },
         ],
     },
     {
@@ -373,9 +375,9 @@ export const games: Game[] = [
                 details: [
                     'Marked with locomotive symbols on the map',
                     'Must play locomotives for marked spaces',
-                    'No team play rules (unlike regular Asia map)'
-                ]
-            }
+                    'No team play rules (unlike regular Asia map)',
+                ],
+            },
         ],
     },
     {
@@ -397,21 +399,19 @@ export const games: Game[] = [
                 details: [
                     'Must claim at least one route of each color: red, orange, yellow, green, blue, purple, black, white',
                     'Gray routes do not count toward color bonus',
-                    'Locomotives do not count as any specific color'
+                    'Locomotives do not count as any specific color',
                 ],
                 table: {
                     headers: ['Colors Claimed', 'Bonus Points'],
-                    rows: [
-                        ['8 colors', '15 points']
-                    ]
-                }
+                    rows: [['8 colors', '15 points']],
+                },
             },
             {
                 name: 'Country connections',
                 description: 'Bonus for connecting France to neighboring countries',
                 details: [
                     'Must have continuous route from France to each country',
-                    'Each connection scores points independently'
+                    'Each connection scores points independently',
                 ],
                 table: {
                     headers: ['Country Connection', 'Bonus Points'],
@@ -420,10 +420,10 @@ export const games: Game[] = [
                         ['France to Belgium', '8 points'],
                         ['France to Italy', '8 points'],
                         ['France to Spain', '6 points'],
-                        ['France to Switzerland', '5 points']
-                    ]
-                }
-            }
+                        ['France to Switzerland', '5 points'],
+                    ],
+                },
+            },
         ],
     },
     {
@@ -447,8 +447,8 @@ export const games: Game[] = [
                     'Moves when certain routes are claimed',
                     'Player who moves Alvin scores 3 points',
                     'Routes that move Alvin are marked on the board',
-                    'Alvin can visit each city only once'
-                ]
+                    'Alvin can visit each city only once',
+                ],
             },
             {
                 name: 'Home cities',
@@ -456,10 +456,10 @@ export const games: Game[] = [
                 details: [
                     'Randomly assigned at game start',
                     'All destination tickets must connect to your home city',
-                    'Cannot complete tickets that don\'t connect to home',
-                    'Network must be continuous from home city'
-                ]
-            }
+                    "Cannot complete tickets that don't connect to home",
+                    'Network must be continuous from home city',
+                ],
+            },
         ],
     },
     {
@@ -482,8 +482,8 @@ export const games: Game[] = [
                     'Buy shares instead of drawing train cards',
                     'Each company has limited shares available',
                     'Costs 1 locomotive card to buy 1 share',
-                    'Can buy multiple shares of the same company'
-                ]
+                    'Can buy multiple shares of the same company',
+                ],
             },
             {
                 name: 'Share scoring',
@@ -491,7 +491,7 @@ export const games: Game[] = [
                 details: [
                     'Player with most shares in a company gets full points',
                     'Ties split the points equally',
-                    'Companies only score if someone claims routes for them'
+                    'Companies only score if someone claims routes for them',
                 ],
                 table: {
                     headers: ['Company Routes Claimed', 'Points for Most Shares'],
@@ -499,10 +499,10 @@ export const games: Game[] = [
                         ['1-2 routes', '5 points'],
                         ['3-4 routes', '10 points'],
                         ['5-6 routes', '15 points'],
-                        ['7+ routes', '20 points']
-                    ]
-                }
-            }
+                        ['7+ routes', '20 points'],
+                    ],
+                },
+            },
         ],
     },
     {
@@ -526,8 +526,8 @@ export const games: Game[] = [
                     'Cost 1-4 locomotives each',
                     'Provide ongoing benefits or one-time effects',
                     'Limited quantity of each technology',
-                    'Examples: draw extra cards, claim routes cheaper, bonus points'
-                ]
+                    'Examples: draw extra cards, claim routes cheaper, bonus points',
+                ],
             },
             {
                 name: 'Concessions',
@@ -536,9 +536,9 @@ export const games: Game[] = [
                     'Wales, Scotland, Ireland, and France require concessions',
                     'Must own the appropriate concession to claim routes in that region',
                     'Concessions can be bought with technology purchases',
-                    'Some destination tickets require multiple concessions'
-                ]
-            }
+                    'Some destination tickets require multiple concessions',
+                ],
+            },
         ],
     },
     {
@@ -560,8 +560,8 @@ export const games: Game[] = [
                 details: [
                     'Fewer trains make for faster gameplay',
                     'Perfect for quick games between longer sessions',
-                    'Simplified rules compared to full maps'
-                ]
+                    'Simplified rules compared to full maps',
+                ],
             },
             {
                 name: 'Tram routes',
@@ -569,8 +569,8 @@ export const games: Game[] = [
                 details: [
                     'Most routes are 1-2 trains long',
                     'Routes represent tram lines through the city',
-                    'Compact map with shorter distances'
-                ]
+                    'Compact map with shorter distances',
+                ],
             },
         ],
     },
