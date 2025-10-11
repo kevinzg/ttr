@@ -2,6 +2,7 @@ export interface Game {
     id: string;
     name: string;
     rules: { key: string; value: string }[];
+    rulebook?: string;
 }
 
 export const games: Game[] = [
@@ -65,15 +66,16 @@ export const games: Game[] = [
         name: 'Italy',
         rules: [
             { key: '# of players', value: '2-5' },
-            { key: '# of trains', value: '20' },
+            { key: '# of trains', value: '45' },
             { key: '# initial cards', value: '4' },
-            { key: '# initial tickets', value: '3, keep 2' },
-            { key: '# extra tickets', value: '3, keep 1' },
-            { key: 'Longest route bonus', value: '10 points' },
-            { key: 'Ferry routes', value: 'Require locomotives' },
-            { key: 'Region Bonus', value: 'Points for connecting regions' },
-            { key: 'End game trigger', value: '2 or fewer trains left' }
+            { key: '# initial tickets', value: '5, keep 3+' },
+            { key: '# extra tickets', value: '4, keep 1+' },
+            { key: 'Discarded tickets', value: 'under the deck' },
+            { key: 'End of game bonus', value: 'bonus points for connected regions' },
+            { key: 'Ferry cards', value: 'You can draw 1 ferry card as your turn action. You cannot have more than 2.' },
+            { key: 'Ferry routes', value: 'Spaces with a wave symbol require a locomotive or ferry card. One ferry card can be used for up to 2 spaces.' },
         ],
+        rulebook: 'https://cdn.1j1ju.com/medias/10/df/07-ticket-to-ride-map-collection-volume-7-italy-rulebook.pdf'
     },
     {
         id: 'india',
