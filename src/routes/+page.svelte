@@ -38,8 +38,20 @@
             <div
                 class="overflow-hidden rounded-xl border border-gray-200/50 bg-white/90 shadow-lg backdrop-blur-sm dark:border-slate-600/50 dark:bg-slate-800/80"
             >
-                <div class="rounded-t-xl bg-gray-600 px-6 py-4 text-white dark:bg-gray-700">
+                <div class="rounded-t-xl bg-gray-600 px-6 py-4 text-white dark:bg-gray-700 flex justify-between items-center">
                     <h2 class="text-2xl font-bold">{game.name}</h2>
+                    {#if game.rulebook}
+                        <!-- svelte-ignore svelte/no-navigation-without-resolve -->
+                        <a
+                            href={game.rulebook}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-sveltekit-external
+                            class="bg-white/20 hover:bg-white/30 text-white text-sm px-3 py-1 rounded-md transition-colors duration-200 font-medium"
+                        >
+                            📖 Rulebook
+                        </a>
+                    {/if}
                 </div>
 
                 <table class="w-full">
@@ -125,20 +137,7 @@
                 </table>
             </div>
 
-            {#if game.rulebook}
-                <div class="mt-4 px-2">
-                    <!-- svelte-ignore svelte/no-navigation-without-resolve -->
-                    <a
-                        href={game.rulebook}
-                        target="_blank"
-                        rel="noopener noreferrer external"
-                        data-sveltekit-external
-                        class="text-sm text-green-600 transition-colors hover:text-green-800 dark:text-green-400 dark:hover:text-green-300"
-                    >
-                        📖 View Rulebook
-                    </a>
-                </div>
-            {/if}
+
 
             <div class="mt-4 px-2">
                 <a
