@@ -36,6 +36,7 @@ export const games: Game[] = [
             endOfGameBonus: 'Longest route: 10 points',
         },
         extraRules: [],
+        rulebook: 'https://ncdn0.daysofwonder.com/tickettoride/en/img/tt_rules_2015_en.pdf',
     },
     {
         id: 'europe',
