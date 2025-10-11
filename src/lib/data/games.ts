@@ -14,6 +14,10 @@ export type Game = {
         name: string;
         description?: string;
         details?: Array<string>; // appear as bullet points
+        table?: {
+            headers?: Array<string>;
+            rows: Array<Array<string>>;
+        };
     }>;
     rulebook?: string; // URL to the rulebook
 };
@@ -126,6 +130,16 @@ export const games: Game[] = [
                     'Distinct networks are scored separately.',
                     'Sardegna, Sicilia and Puglia count as 2 regions instead of one if all their cities are part of the same network.',
                 ],
+                table: {
+                    headers: ['Regions Connected', 'Bonus Points'],
+                    rows: [
+                        ['5 regions', '1 point'],
+                        ['6 regions', '3 points'],
+                        ['7 regions', '6 points'],
+                        ['8 regions', '10 points'],
+                        ['9 regions', '15 points']
+                    ]
+                }
             },
         ],
         rulebook:

@@ -75,11 +75,39 @@
                                         <div class="mb-2">{rule.description}</div>
                                     {/if}
                                     {#if rule.details && rule.details.length > 0}
-                                        <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1 text-left">
+                                        <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1 text-left mb-2">
                                             {#each rule.details as detail, idx (idx)}
                                                 <li>{detail}</li>
                                             {/each}
                                         </ul>
+                                    {/if}
+                                    {#if rule.table}
+                                        <div class="text-left">
+                                            <table class="text-xs border border-gray-300 dark:border-gray-600 rounded bg-gray-50 dark:bg-gray-700 overflow-hidden">
+                                                {#if rule.table.headers}
+                                                    <thead>
+                                                        <tr class="bg-gray-200 dark:bg-gray-600">
+                                                            {#each rule.table.headers as header}
+                                                                <th class="px-2 py-1 text-gray-800 dark:text-gray-200 font-medium border-r border-gray-300 dark:border-gray-500 last:border-r-0">
+                                                                    {header}
+                                                                </th>
+                                                            {/each}
+                                                        </tr>
+                                                    </thead>
+                                                {/if}
+                                                <tbody>
+                                                    {#each rule.table.rows as row}
+                                                        <tr class="border-t border-gray-300 dark:border-gray-600">
+                                                            {#each row as cell}
+                                                                <td class="px-2 py-1 text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-gray-500 last:border-r-0">
+                                                                    {cell}
+                                                                </td>
+                                                            {/each}
+                                                        </tr>
+                                                    {/each}
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     {/if}
                                 </td>
                             </tr>
