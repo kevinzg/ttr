@@ -134,10 +134,16 @@ export const games: Game[] = [
                     headers: ['Regions Connected', 'Bonus Points'],
                     rows: [
                         ['5 regions', '1 point'],
-                        ['6 regions', '3 points'],
-                        ['7 regions', '6 points'],
-                        ['8 regions', '10 points'],
-                        ['9 regions', '15 points']
+                        ['6 regions', '2 points'],
+                        ['7 regions', '4 points'],
+                        ['8 regions', '7 points'],
+                        ['9 regions', '11 points'],
+                        ['10 regions', '16 points'],
+                        ['11 regions', '22 points'],
+                        ['12 regions', '29 points'],
+                        ['13 regions', '37 points'],
+                        ['14 regions', '46 points'],
+                        ['15+ regions', '56 points'],
                     ]
                 }
             },
