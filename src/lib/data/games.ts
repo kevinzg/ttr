@@ -195,42 +195,37 @@ export const games: Game[] = [
     },
     {
         id: 'italy',
-        name: 'Italy',
+        name: 'Italy ✅',
         rules: {
             players: '2-5',
             trains: '45',
             initialTrainCards: '4',
             initialTickets: '5, keep 3+',
             extraTickets: '4, keep 1+',
-            discardedTickets: 'under the deck',
-            endOfGameBonus: 'Bonus points for connected regions',
+            discardedTickets: 'bottom of the deck',
+            endOfGameBonus: 'Regions bonus',
         },
         extraRules: [
             {
-                name: 'Ferry cards',
-                description: 'Special cards for ferry routes',
+                name: 'Ferries',
+                description:
+                    'Special gray routes with wave symbols that require ferry cards or locomotives.',
                 details: [
-                    'You can draw 1 ferry card as your turn action',
-                    'You cannot have more than 2 ferry cards',
-                ]
+                    'You may draw 1 ferry card as your entire turn action.',
+                    'You may hold a maximum of 2 ferry cards at a time.',
+                    'Each wave symbol on a route requires a locomotive or ferry card to claim.',
+                    'A single ferry card can cover up to 2 wave symbols.',
+                    'You must still play the correct number of colored train cards for the rest of the route.',
+                ],
             },
             {
-                name: 'Ferry routes',
-                description: 'Gray routes with wave symbols',
+                name: 'Regions Bonus',
+                description: 'Earn bonus points for connecting multiple Italian regions.',
                 details: [
-                    'Spaces with a wave symbol require a locomotive or ferry card',
-                    'One ferry card can be used for up to 2 spaces',
-                    'Must still play the correct number of train cards'
-                ]
-            },
-            {
-                name: 'Regions bonus',
-                description: 'Bonus points for connecting Italian regions',
-                details: [
-                    'There are 17 regions total',
-                    'Each separate network scores independently',
-                    'Sardegna, Sicilia and Puglia count as 2 regions if all cities are connected',
-                    'Minimum 5 regions needed to score'
+                    'There are 17 regions total.',
+                    'Sardegna, Sicilia, and Puglia each count as 2 regions if all their cities are connected.',
+                    'You need at least 5 regions in a single network to score points.',
+                    'Each separate network scores independently.',
                 ],
                 table: {
                     headers: ['Regions Connected', 'Bonus Points'],
