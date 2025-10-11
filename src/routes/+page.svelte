@@ -1,5 +1,15 @@
 <script>
     import { games } from '$lib/data/games';
+
+    const basicRules = [
+        { key: 'players', label: '# of players' },
+        { key: 'trains', label: '# of trains' },
+        { key: 'initialTrainCards', label: '# initial cards' },
+        { key: 'initialTickets', label: '# initial tickets' },
+        { key: 'extraTickets', label: '# extra tickets' },
+        { key: 'discardedTickets', label: 'Discarded tickets' },
+        { key: 'endOfGameBonus', label: 'End of game bonus' },
+    ];
 </script>
 
 <div class="mx-auto max-w-4xl px-4 pb-8">
@@ -34,22 +44,64 @@
 
                 <table class="w-full">
                     <tbody>
-                        {#each game.rules as rule (rule.key)}
+                        {#each basicRules as rule, index (rule.key)}
+                            <tr
+                                class="border-b border-gray-100 transition-colors duration-150 hover:bg-gray-200/50 dark:border-slate-700 dark:hover:bg-slate-700/50"
+                                class:last:border-b-0={index === basicRules.length - 1 && game.extraRules.length === 0}
+                            >
+                                <td class="px-6 py-4 font-medium text-gray-800 dark:text-gray-200">
+                                    {rule.label}
+                                </td>
+                                <td class="px-6 py-4 text-right font-semibold text-blue-600 dark:text-blue-400">
+                                    {rule.key === 'players' ? game.rules.players :
+                                     rule.key === 'trains' ? game.rules.trains :
+                                     rule.key === 'initialTrainCards' ? game.rules.initialTrainCards :
+                                     rule.key === 'initialTickets' ? game.rules.initialTickets :
+                                     rule.key === 'extraTickets' ? game.rules.extraTickets :
+                                     rule.key === 'discardedTickets' ? game.rules.discardedTickets :
+                                     rule.key === 'endOfGameBonus' ? game.rules.endOfGameBonus : ''}
+                                </td>
+                            </tr>
+                        {/each}
+                        {#each game.extraRules as rule (rule.name)}
                             <tr
                                 class="border-b border-gray-100 transition-colors duration-150 last:border-b-0 hover:bg-gray-200/50 dark:border-slate-700 dark:hover:bg-slate-700/50"
                             >
-                                <td class="px-6 py-4 font-medium text-gray-800 dark:text-gray-200"
-                                    >{rule.key}</td
-                                >
-                                <td
-                                    class="px-6 py-4 text-right font-semibold text-blue-600 dark:text-blue-400"
-                                    >{rule.value}</td
-                                >
+                                <td class="px-6 py-4 font-medium text-gray-800 dark:text-gray-200">
+                                    {rule.name}
+                                </td>
+                                <td class="px-6 py-4 text-right font-semibold text-blue-600 dark:text-blue-400">
+                                    {#if rule.description}
+                                        <div class="mb-2">{rule.description}</div>
+                                    {/if}
+                                    {#if rule.details && rule.details.length > 0}
+                                        <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1 text-left">
+                                            {#each rule.details as detail, idx (idx)}
+                                                <li>{detail}</li>
+                                            {/each}
+                                        </ul>
+                                    {/if}
+                                </td>
                             </tr>
                         {/each}
                     </tbody>
                 </table>
             </div>
+
+            {#if game.rulebook}
+                <div class="mt-4 px-2">
+                    <!-- svelte-ignore svelte/no-navigation-without-resolve -->
+                    <a
+                        href={game.rulebook}
+                        target="_blank"
+                        rel="noopener noreferrer external"
+                        data-sveltekit-external
+                        class="text-sm text-green-600 transition-colors hover:text-green-800 dark:text-green-400 dark:hover:text-green-300"
+                    >
+                        📖 View Rulebook
+                    </a>
+                </div>
+            {/if}
 
             <div class="mt-4 px-2">
                 <a
