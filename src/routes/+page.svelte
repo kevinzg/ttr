@@ -70,21 +70,7 @@
                                 <td
                                     class="px-6 py-4 text-right font-semibold text-blue-600 dark:text-blue-400"
                                 >
-                                    {rule.key === 'players'
-                                        ? game.rules.players
-                                        : rule.key === 'trains'
-                                          ? game.rules.trains
-                                          : rule.key === 'initialTrainCards'
-                                            ? game.rules.initialTrainCards
-                                            : rule.key === 'initialTickets'
-                                              ? game.rules.initialTickets
-                                              : rule.key === 'extraTickets'
-                                                ? game.rules.extraTickets
-                                                : rule.key === 'discardedTickets'
-                                                  ? game.rules.discardedTickets
-                                                  : rule.key === 'endOfGameBonus'
-                                                    ? game.rules.endOfGameBonus
-                                                    : ''}
+                                    {game.rules[rule.key]}
                                 </td>
                             </tr>
                         {/each}
@@ -112,7 +98,7 @@
                                                         <ul
                                                             class="mb-2 list-inside list-disc space-y-1 text-sm text-gray-600 dark:text-gray-400"
                                                         >
-                                                            {#each rule.details as detail}
+                                                            {#each rule.details as detail, idx (idx)}
                                                                 <li>{detail}</li>
                                                             {/each}
                                                         </ul>
@@ -120,14 +106,14 @@
                                                     {#if rule.table}
                                                         <div class="flex justify-center">
                                                             <table
-                                                                class="overflow-hidden rounded border border-gray-300 bg-gray-50 text-xs dark:border-gray-600 dark:bg-gray-700"
+                                                                class="mt-2 overflow-hidden rounded border border-gray-300 bg-gray-50 text-xs dark:border-gray-600 dark:bg-gray-700"
                                                             >
                                                                 {#if rule.table.headers}
                                                                     <thead>
                                                                         <tr
                                                                             class="bg-gray-200 dark:bg-gray-600"
                                                                         >
-                                                                            {#each rule.table.headers as header}
+                                                                            {#each rule.table.headers as header, idx (idx)}
                                                                                 <th
                                                                                     class="border-r border-gray-300 px-2 py-1 font-medium text-gray-800 last:border-r-0 dark:border-gray-500 dark:text-gray-200"
                                                                                 >
@@ -138,11 +124,11 @@
                                                                     </thead>
                                                                 {/if}
                                                                 <tbody>
-                                                                    {#each rule.table.rows as row}
+                                                                    {#each rule.table.rows as row, idx (idx)}
                                                                         <tr
                                                                             class="border-t border-gray-300 dark:border-gray-600"
                                                                         >
-                                                                            {#each row as cell}
+                                                                            {#each row as cell, idx (idx)}
                                                                                 <td
                                                                                     class="border-r border-gray-300 px-2 py-1 text-gray-700 last:border-r-0 dark:border-gray-500 dark:text-gray-300"
                                                                                 >
