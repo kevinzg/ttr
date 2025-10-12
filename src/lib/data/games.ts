@@ -576,6 +576,89 @@ export const games: Game[] = [
         ],
     },
     {
+        id: 'iberia',
+        name: 'Iberia',
+        rules: {
+            players: '2-5',
+            trains: '35',
+            initialTrainCards: '4',
+            initialTickets: '6 (draft), keep 4',
+            extraTickets: '6 (draft), keep 4',
+            discardedTickets: 'bottom of destination deck',
+            endOfGameBonus: 'Festival cards scoring',
+            features: 'Festival cards, ticket drafting twice',
+        },
+        extraRules: [
+            {
+                name: 'Ticket Drafting (twice)',
+                description:
+                    'Draft destination tickets twice during the game rather than simple draw',
+                details: [
+                    'At game start, each player drafts 6 destination cards (choose one, pass the rest) until each holds 4. :contentReference[oaicite:6]{index=6}',
+                    'Repeat the draft process one more time when the train deck is about to be exhausted (via a “Ticket Draft” card inserted in the deck). :contentReference[oaicite:7]{index=7}',
+                ],
+            },
+            {
+                name: 'Festival Cards',
+                description:
+                    'As you build routes to special “festival” cities, you collect festival cards which score bonus points at end',
+                details: [
+                    'There are 54 Festival cards shuffled into the train deck. :contentReference[oaicite:8]{index=8}',
+                    'When one is drawn (or the face-up pool is refreshed), place it adjacent to the corresponding city on the map. :contentReference[oaicite:9]{index=9}',
+                    'If you claim a route that reaches a city which has festival cards, you may take *all* those festival cards currently there. :contentReference[oaicite:10]{index=10}',
+                    'At end of game, for each city you collected festival cards in, you score points based on how many of that city’s festival cards you hold (the more, the higher the value). :contentReference[oaicite:11]{index=11}',
+                ],
+            },
+        ],
+        rulebook:
+            'https://cdn.svc.asmodee.net/production-daysofwonder/uploads/2024/07/IBERIA-RULES_EN-1.pdf',
+    },
+    {
+        id: 'south-korea',
+        name: 'South Korea',
+        rules: {
+            players: '2-5',
+            trains: '45',
+            initialTrainCards: '4',
+            initialTickets: '6 (draft), keep 4',
+            extraTickets: '3, keep at least 1',
+            discardedTickets: 'bottom of destination deck',
+            endOfGameBonus: 'Province scoring',
+            features: 'Province mat, express train cards',
+        },
+        extraRules: [
+            {
+                name: 'Province Mat & Route Claims',
+                description:
+                    'Claiming a route also lets you place a marker in the province mat zone corresponding to that color',
+                details: [
+                    'Routes in South Korea are grouped by color (e.g. blue in northeast, yellow in northwest, etc.). :contentReference[oaicite:18]{index=18}',
+                    'When claiming a route, you may place one of your trains on a matching colored slot on the province mat in an empty space corresponding to the number of cards played. You may even play extra cards to claim a higher slot. :contentReference[oaicite:19]{index=19}',
+                    'If the “official” slot is taken, you may take the next lower open slot. :contentReference[oaicite:20]{index=20}',
+                ],
+            },
+            {
+                name: 'Express Train Cards',
+                description: 'Special +1, +2, +3 cards that allow extra actions on your turn',
+                details: [
+                    'Each player receives 3 Express Train cards (marked +1, +2, +3) at game start. :contentReference[oaicite:21]{index=21}',
+                    'You may play one Express card on your turn to do one of the following enhanced actions: draw extra train cards, draw extra destination tickets, or boost your province mat placement (i.e. claim a higher value on a route). :contentReference[oaicite:22]{index=22}',
+                ],
+            },
+            {
+                name: 'End-of-Game Province Scoring',
+                description:
+                    'At game end, evaluate each color track on province mat and award bonus points',
+                details: [
+                    'For each color track on the province mat, sum up the values claimed (i.e. the positions of your markers). :contentReference[oaicite:23]{index=23}',
+                    'The player (or players tied) with the highest sum in each color earns a bonus (10 / 6 / 4 / 2 depending on number of players) per color track. :contentReference[oaicite:24]{index=24}',
+                ],
+            },
+        ],
+        rulebook:
+            'https://cdn.svc.asmodee.net/production-daysofwonder/uploads/2024/07/KOREA-RULES_EN.pdf',
+    },
+    {
         id: 'amsterdam',
         name: 'Amsterdam',
         rules: {
