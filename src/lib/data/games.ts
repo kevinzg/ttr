@@ -8,7 +8,8 @@ export type Game = {
         initialTickets: string; // 3, keep 2+
         extraTickets: string; // 3, keep 1+
         discardedTickets: string; // under the deck, or in the box
-        endOfGameBonus: string; // Longest route: 10 points
+        endOfGameBonus: string; // Longest route (10 points)
+        features: string;
     };
     extraRules: Array<{
         name: string;
@@ -33,7 +34,8 @@ export const games: Game[] = [
             initialTickets: '3, keep 2+',
             extraTickets: '3, keep 1+',
             discardedTickets: 'bottom of the deck',
-            endOfGameBonus: 'Longest route: 10 points',
+            endOfGameBonus: 'Longest route (10 points)',
+            features: 'Classic base game',
         },
         extraRules: [
             {
@@ -64,7 +66,8 @@ export const games: Game[] = [
             initialTickets: '1 long + 3 regular, keep 2+',
             extraTickets: '3, keep 1+',
             discardedTickets: 'in the box',
-            endOfGameBonus: 'Longest route: 10 points',
+            endOfGameBonus: 'Longest route (10 points)',
+            features: 'Train stations, Tunnels, Ferries',
         },
         extraRules: [
             {
@@ -125,7 +128,8 @@ export const games: Game[] = [
             initialTickets: '3, keep 2+',
             extraTickets: '3, keep 1+',
             discardedTickets: 'in the box',
-            endOfGameBonus: 'Longest route: 10 points',
+            endOfGameBonus: 'Longest route (10 points)',
+            features: 'Terrain cards',
         },
         extraRules: [
             {
@@ -161,6 +165,7 @@ export const games: Game[] = [
             extraTickets: '3, keep 1+',
             discardedTickets: 'bottom of the deck',
             endOfGameBonus: 'Bullet Train bonus',
+            features: 'Shared bullet train',
         },
         extraRules: [
             {
@@ -225,6 +230,7 @@ export const games: Game[] = [
             extraTickets: '4, keep 1+',
             discardedTickets: 'bottom of the deck',
             endOfGameBonus: 'Regions bonus',
+            features: 'Ferry cards and regions bonus',
         },
         extraRules: [
             {
@@ -279,7 +285,8 @@ export const games: Game[] = [
             initialTickets: '3, keep 2',
             extraTickets: '3, keep 1',
             discardedTickets: 'in the box',
-            endOfGameBonus: 'Longest route: 10 points',
+            endOfGameBonus: 'Longest route (10 points)',
+            features: 'Mandala bonuses',
         },
         extraRules: [
             {
@@ -319,6 +326,7 @@ export const games: Game[] = [
             extraTickets: '3, keep 1',
             discardedTickets: 'in the box',
             endOfGameBonus: 'Longest route: 10 points',
+            features: 'Tunnels, shorter game',
         },
         extraRules: [
             {
@@ -343,6 +351,7 @@ export const games: Game[] = [
             extraTickets: '3, keep 1',
             discardedTickets: 'in the box',
             endOfGameBonus: 'Longest route: 10 points per team member',
+            features: 'Teams',
         },
         extraRules: [
             {
@@ -387,6 +396,7 @@ export const games: Game[] = [
             extraTickets: '3, keep 1',
             discardedTickets: 'in the box',
             endOfGameBonus: 'Longest route: 10 points',
+            features: 'Mountain passes',
         },
         extraRules: [
             {
@@ -411,6 +421,7 @@ export const games: Game[] = [
             extraTickets: '4, keep 1',
             discardedTickets: 'in the box',
             endOfGameBonus: 'Longest route: 10 points',
+            features: 'Track placement',
         },
         extraRules: [
             {
@@ -457,6 +468,7 @@ export const games: Game[] = [
             extraTickets: '3, keep 1',
             discardedTickets: 'in the box',
             endOfGameBonus: 'Longest route: 10 points',
+            features: 'Home cities and Alvin',
         },
         extraRules: [
             {
@@ -493,6 +505,7 @@ export const games: Game[] = [
             extraTickets: '3, keep 1',
             discardedTickets: 'in the box',
             endOfGameBonus: 'Longest route: 10 points',
+            features: 'Stock share investments',
         },
         extraRules: [
             {
@@ -536,6 +549,7 @@ export const games: Game[] = [
             extraTickets: '3, keep 1',
             discardedTickets: 'in the box',
             endOfGameBonus: 'Longest route: 10 points',
+            features: 'Technology cards and Concessions',
         },
         extraRules: [
             {
@@ -572,6 +586,7 @@ export const games: Game[] = [
             extraTickets: '3, keep 1',
             discardedTickets: 'in the box',
             endOfGameBonus: 'Goods bonus',
+            features: 'Quick gameplay and Goods tokens',
         },
         extraRules: [
             {
